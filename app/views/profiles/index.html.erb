@@ -1,0 +1,21 @@
+<body>
+  <div class="container">
+<h1>User Profiles</h1>
+<br>
+<p>
+	<table class="table table-striped">
+	<tr><th>Name</th>
+		<th>Email</th>
+	</tr>
+		<% @profiles.each do |profile| %>
+		<tr>
+		<td><h5><%= link_to profile.name, profile_path(profile) %></h5></td>
+		<td><h5><%= profile.email %></h5></td>
+	</tr>
+		
+	<% end %>
+</table>
+</p>
+</br>
+ </div>
+</body>
